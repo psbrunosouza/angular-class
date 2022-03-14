@@ -7,7 +7,10 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PageComponent implements OnInit {
 
-  @Input() title = "";
+  @Input() nome = "";
+  @Input() idade: number;
+  @Input() CPF: number;
+  @Input() email: string;
 
   constructor() { }
 
