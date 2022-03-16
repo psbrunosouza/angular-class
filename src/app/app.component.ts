@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
   submit(formRef: NgForm){
     if(formRef.valid){
       console.log(this.nome, this.CPF, this.idade, this.email)
-      console.log(formRef)
       // salva/ envia o dado
     }else {
       console.log("Seu email nn é valido")
