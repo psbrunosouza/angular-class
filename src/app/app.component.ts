@@ -19,13 +19,25 @@ export class AppComponent implements OnInit {
 
   submit() {
     console.log(this.nome, this.idade, this.CPF, this.email)
+
   }
-  teste(){
+  maiorIdade(){
     if (this.idade < 18){
       console.log('Menor de idade')
     } else {
       console.log('maior de idade')
     }
   }
+
+  nomeMaiusculo(){
+    let nomeMai = this.nome.toUpperCase()
+    console.log(nomeMai)
+  }
+
+  nomeMinusculo(){
+    let nomeMin = this.nome.toLowerCase()
+    console.log(nomeMin)
+  }
+
 }
 
