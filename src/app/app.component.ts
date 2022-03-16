@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -17,9 +18,15 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit() {
-    console.log(this.nome, this.idade, this.CPF, this.email)
-
+  submit(formRef: NgForm){
+    if(formRef.valid){
+      console.log(this.nome, this.CPF, this.idade, this.email)
+      console.log(formRef)
+      // salva/ envia o dado
+    }else {
+      console.log("Seu email nn é valido")
+      // exibe um retorno informando que deu errado
+    }
   }
   maiorIdade(){
     if (this.idade < 18){
@@ -38,6 +45,5 @@ export class AppComponent implements OnInit {
     let nomeMin = this.nome.toLowerCase()
     console.log(nomeMin)
   }
-
 }
 

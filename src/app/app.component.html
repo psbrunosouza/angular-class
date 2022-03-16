@@ -1,14 +1,21 @@
 <link rel="stylesheet" href="app.component.scss">
 <app-page [nome]="nome"></app-page>
-Nome:*<input [(ngModel)]="nome"/>
-<br>
-Idade:*<input type="number" [(ngModel)]="idade" />
-<br>
-CPF:*<input type="number" [(ngModel)]="CPF"/>
-<br>
-Email:*<input type="email" [(ngModel)]="email"/>
-<br>
-<button (click)="submit()">Enviar</button>
-<button (click)="maiorIdade()">teste</button>
-<button (click)="nomeMaiusculo()">Maiusculo</button>
-<button (click)="nomeMinusculo()">Minusculo</button>
+
+<form #form="ngForm">
+  <div class="inputs">
+    Nome:*<input name=nome [(ngModel)]="nome"/>
+  <br>
+    Idade:*<input type="number" name=idade [(ngModel)]="idade" />
+  <br>
+    CPF:*<input type="number" name=cpf [(ngModel)]="CPF" mask="000.000.000.00"/>
+  <br>
+    Email:*<input type="email" name="email" [(ngModel)]="email" ngModel [email]="true"/>
+  <br>
+  </div>
+</form>
+<div class="botoes">
+  <button (click)="submit(form)">Enviar</button>
+  <button (click)="maiorIdade()">teste</button>
+  <button (click)="nomeMaiusculo()">Maiusculo</button>
+  <button (click)="nomeMinusculo()">Minusculo</button>
+</div>
