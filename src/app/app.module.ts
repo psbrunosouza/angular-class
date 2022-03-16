@@ -13,7 +13,7 @@ import {NgxMaskModule} from "ngx-mask";
     imports: [
         BrowserModule,
         FormsModule,
-        NgxMaskModule
+        NgxMaskModule.forRoot()
     ],
   providers: [],
   bootstrap: [AppComponent]
