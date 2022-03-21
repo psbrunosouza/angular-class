@@ -1,7 +1,12 @@
 <div *ngIf="phoneItem.status === 'disponível'" class="phone-item">
-  &nbsp;<p>Name: {{phoneItem.name}}</p>
-  <p>Status: {{phoneItem.status}}</p>
-  <p>CPF: {{phoneItem.cpf}}</p><br> <br>
-  <button class="butExcluir">Excluir</button>
-  <button class="butEditar">Editar</button>
+  <div class="dados">
+    <p>Name: {{phoneItem.name}}</p>
+    <p>Status: {{phoneItem.status}}</p>
+    <p>CPF: {{phoneItem.cpf}}</p>
+    <p *ngIf="phoneItem.isInternational === true">Usuário Internacional</p>
+  </div>
+  <div>
+    <button class="butExcluir">Excluir</button>
+    <button class="butEditar">Editar</button>
+  </div>
 </div>
