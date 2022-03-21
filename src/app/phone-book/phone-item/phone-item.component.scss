@@ -1,3 +1,34 @@
-.phone-item {
+*{
   display: flex;
+}
+.phone-item {
+  display: flow;
+  background-color: #b69bff;
+  margin-top: 1%;
+  padding: 1%;
+  border-radius: 5%;
+  text-align: center;
+  width: 50%;
+}
+p{
+  margin-left: 5%;
+}
+.butExcluir{
+  margin-left: 5%;
+  align-items: center;
+  border-color: transparent;
+  border-radius: 5%;
+  background-color: #ff8783;
+  font-size: 120%;
+}
+.butEditar{
+  margin-left: 1%;
+  align-items: center;
+  border-color: transparent;
+  border-radius: 5%;
+  background-color: #ffe683;
+  font-size: 120%;
+}
+.butEditar:hover{
+  scale: 1.1%;
 }
