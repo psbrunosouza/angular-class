@@ -11,7 +11,7 @@ export class PhoneBookComponent implements OnInit {
   phoneBook: PhoneBookModel[] = [
     {
       name: "José",
-      phone: "19 99999-9999",
+      phone: "21 99999-9999",
       status: "disponível",
       cpf: "550.415.008-60",
       isInternational: true,
@@ -19,7 +19,7 @@ export class PhoneBookComponent implements OnInit {
     },
     {
       name: "Lucas",
-      phone: "19 99999-9999",
+      phone: "21 99999-9999",
       status: "disponível",
       cpf: "550.415.008-60",
       isInternational: true,

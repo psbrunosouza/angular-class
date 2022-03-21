@@ -1,20 +1,15 @@
-*{
-  display: flex;
-}
 .phone-item {
-  display: flow;
+  display: inline-flex;
   background-color: #b69bff;
-  margin-top: 1%;
-  padding: 1%;
+  margin-top: 0.5%;
+  padding: 0.5%;
   border-radius: 5%;
   text-align: center;
-  width: 50%;
-}
-p{
-  margin-left: 5%;
+  width: 25%;
 }
 .butExcluir{
-  margin-left: 5%;
+  width: 80%;
+  padding: 15%;
   align-items: center;
   border-color: transparent;
   border-radius: 5%;
@@ -22,13 +17,13 @@ p{
   font-size: 120%;
 }
 .butEditar{
+  margin-top: 5%;
+  width: 80%;
+  padding: 15%;
   margin-left: 1%;
   align-items: center;
   border-color: transparent;
   border-radius: 5%;
   background-color: #ffe683;
   font-size: 120%;
-}
-.butEditar:hover{
-  scale: 1.1%;
 }
