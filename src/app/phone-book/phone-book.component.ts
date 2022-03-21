@@ -12,29 +12,13 @@ export class PhoneBookComponent implements OnInit {
     {
       name: "José",
       phone: "19 99999-9999",
-      cpf: "550",
-      email: "igor@teste.com",
-      status: "disponível",
-      isInternational: false
+      status: "disponível"
     },
     {
       name: "João",
       phone: "11 98999-9999",
-      cpf: "550",
-      email: "igor@teste.com",
-      status: "bloqueado",
-      isInternational: false
-    },
-    {
-      name: "Igor",
-      phone: "19 99606-4757",
-      cpf: "550",
-      email: "igor@teste.com",
-      status: "disponível",
-      isInternational: false
+      status: "bloqueado"
     }
-
-
   ]
 
   constructor() { }
