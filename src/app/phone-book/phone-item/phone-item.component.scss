@@ -1,29 +1,72 @@
-.phone-item {
-  display: inline-flex;
+.phone-item{
+  text-align: center;
+  display: -ms-flex;
   background-color: #b69bff;
   margin-top: 0.5%;
   padding: 0.5%;
   border-radius: 5%;
-  text-align: center;
-  width: 25%;
+  width: 20%;
+}
+.botoes{
+  justify-content: center;
+  display: flex;
+  border-color: transparent;
+  font-size: 120%;
 }
 .butExcluir{
-  width: 80%;
-  padding: 15%;
-  align-items: center;
   border-color: transparent;
   border-radius: 5%;
   background-color: #ff8783;
-  font-size: 120%;
+  padding: 5%;
 }
 .butEditar{
-  margin-top: 5%;
-  width: 80%;
-  padding: 15%;
-  margin-left: 1%;
-  align-items: center;
   border-color: transparent;
   border-radius: 5%;
+  margin-left: 5%;
   background-color: #ffe683;
-  font-size: 120%;
+  padding: 5%;
+}
+
+
+  @media(max-width: 500px) {
+    .container{
+      margin-right: 0.5%;
+      margin-top: 0.5%;
+      margin-left: 0.5%;
+      text-align: center;
+    }
+    .card{
+      background-color: #b69bff;
+      margin-right: 0.5%;
+      margin-top: 0.5%;
+      margin-left: 0.5%;
+      padding: 0.5%;
+      border-radius: 5%;
+    }
+    .phone-item {
+      position: relative;
+      margin-left: 20%;
+    }
+    .dados{
+      position: relative;
+      padding-right: 50%;
+      padding-left: 50%;
+    }
+    .botoes{
+      justify-content: center;
+      border-color: transparent;
+      font-size: 120%;
+    }
+    .butExcluir{
+      border-color: transparent;
+      border-radius: 5%;
+      background-color: #ff8783;
+      padding: 5%;
+    }
+    .butEditar{
+      border-color: transparent;
+      border-radius: 5%;
+      background-color: #ffe683;
+      padding: 5%;
+    }
 }

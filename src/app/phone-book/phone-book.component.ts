@@ -15,7 +15,8 @@ export class PhoneBookComponent implements OnInit {
       status: "disponível",
       cpf: "550.415.008-60",
       isInternational: true,
-      idade: 18
+      idade: 18,
+      auxiliarPhones:["(19)996064757", "(19)996064757"]
     },
     {
       name: "Lucas",
@@ -23,7 +24,8 @@ export class PhoneBookComponent implements OnInit {
       status: "disponível",
       cpf: "550.415.008-60",
       isInternational: true,
-      idade: 18
+      idade: 18,
+      auxiliarPhones:["(19)996064757", "(19)996064757"]
     },
     {
       name: "João",
@@ -31,7 +33,8 @@ export class PhoneBookComponent implements OnInit {
       status: "bloqueado",
       cpf: "550.415.008-60",
       isInternational: false,
-      idade: 18
+      idade: 18,
+      auxiliarPhones:["(19)996064757", "(19)996064757"]
     },
     {
       name: "Matheus",
@@ -39,8 +42,9 @@ export class PhoneBookComponent implements OnInit {
       status: "disponível",
       cpf: "550.415.008-60",
       isInternational: false,
-      idade: 18
-    },
+      idade: 18,
+      auxiliarPhones:["(19)996064757", "(19)996064757"]
+    }
   ]
 
   constructor() { }
