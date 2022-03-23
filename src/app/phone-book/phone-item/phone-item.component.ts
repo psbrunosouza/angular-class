@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {PhoneBookModel} from "../phone-book.model";
-import {PhoneBookComponent} from "../phone-book.component";
 
 @Component({
   selector: 'app-phone-item',
@@ -10,12 +9,18 @@ import {PhoneBookComponent} from "../phone-book.component";
 export class PhoneItemComponent implements OnInit {
 
   @Input() phoneItem: PhoneBookModel;
-  @Input() phoneBook: PhoneBookComponent;
+  @Input() phoneBook: PhoneBookModel[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  deleteTel(selectedPhone: number): void{
+    this.phoneBook = this.phoneBook.filter((phone) => phone.id !== selectedPhone)
+  }
 
+  editTel(selectedPhone: string){
+     this.phoneBook = this.phoneItem.name
+  }
 }

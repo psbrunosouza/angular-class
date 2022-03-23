@@ -56,10 +56,11 @@ export class PhoneBookComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
+}
+  /*
   deleteTel(selectedPhone: number): void{
     this.phoneBook = this.phoneBook.filter((phone) => phone.id !== selectedPhone)
   }
   editTel(){
-    this.phoneBook.filter((phone) => phone.name = "José")
-  }
-}
+    this.phoneBook = this.phoneBook*/
