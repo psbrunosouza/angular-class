@@ -1,15 +1,14 @@
 .phone-item{
+  display: flex;
   text-align: center;
-  display: -ms-flex;
   background-color: #b69bff;
   margin-top: 0.5%;
   padding: 0.5%;
   border-radius: 5%;
-  width: 20%;
+  margin-right: 80%;
 }
 .botoes{
   justify-content: center;
-  display: flex;
   border-color: transparent;
   font-size: 120%;
 }
