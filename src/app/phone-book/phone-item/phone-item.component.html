@@ -1,19 +1,21 @@
-<div class="card-container">
-  <div class="card">
-    <div *ngIf="phoneItem.status === 'disponível'" class="phone-item">
-      <div class="dados">
-        <p>Name: {{phoneItem.name}}</p>
-        <p>Status: {{phoneItem.status}}</p>
-        <p>CPF: {{phoneItem.cpf}}</p>
-        <p *ngIf="phoneItem.isInternational === true">Usuário Internacional</p>
-        <p>Telefones auxiliares:</p>
-        <small>{{phoneItem.auxiliarPhones}}</small>
-        <br><br>
-        <div class="botoes">
-          <button class="butExcluir">Excluir</button>
-          <button class="butEditar">Editar</button>
-        </div>
-      </div>
+<!--Testa se o status do phoneItem é disponivel então adiciona a class phone-item-->
+<div *ngIf="phoneItem.status === 'disponível'" class="phone-item">
+  <div class="dados">
+    <!--Interpola o dado com o atributo para atualizar o p-->
+    <p>Name: {{phoneItem.name}}</p>
+    <p>Status: {{phoneItem.status}}</p>
+    <p>CPF: {{phoneItem.cpf}}</p>
+    <!--Testa se o telefone é internacional-->
+    <p *ngIf="phoneItem.isInternational === true">Usuário Internacional</p>
+    <p>Telefones auxiliares:</p>
+    <!--Lista de telefones auxiliares-->
+    <small>{{phoneItem.auxiliarPhones}}</small>
+
+    <br><br>
+
+    <div class="botoes">
+      <button class="butExcluir" (click)="phoneBook.deleteTel()">Excluir</button>
+      <button class="butEditar" (click)="phoneBook.editTel()">Editar</button>
     </div>
   </div>
 </div>

@@ -7,9 +7,10 @@ import {PhoneBookModel} from "./phone-book.model";
   styleUrls: ['./phone-book.component.scss']
 })
 export class PhoneBookComponent implements OnInit {
-
+  //Atribui valor aos atributos declarados
   phoneBook: PhoneBookModel[] = [
     {
+      id: 1,
       name: "José",
       phone: "21 99999-9999",
       status: "disponível",
@@ -19,6 +20,7 @@ export class PhoneBookComponent implements OnInit {
       auxiliarPhones:["(19)996064757", "(19)996064757"]
     },
     {
+      id: 2,
       name: "Lucas",
       phone: "21 99999-9999",
       status: "disponível",
@@ -28,6 +30,7 @@ export class PhoneBookComponent implements OnInit {
       auxiliarPhones:["(19)996064757", "(19)996064757"]
     },
     {
+      id: 3,
       name: "João",
       phone: "11 98999-9999",
       status: "bloqueado",
@@ -37,6 +40,7 @@ export class PhoneBookComponent implements OnInit {
       auxiliarPhones:["(19)996064757", "(19)996064757"]
     },
     {
+      id: 4,
       name: "Matheus",
       phone: "19 99999-9999",
       status: "disponível",
@@ -50,6 +54,12 @@ export class PhoneBookComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
+  deleteTel(selectedPhone: number): void{
+    this.phoneBook = this.phoneBook.filter((phone) => phone.id !== selectedPhone)
+  }
+  editTel(){
+    this.phoneBook.filter((phone) => phone.name = "José")
+  }
 }
