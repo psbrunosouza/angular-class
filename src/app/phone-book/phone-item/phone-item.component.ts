@@ -20,7 +20,7 @@ export class PhoneItemComponent implements OnInit {
     this.phoneBook = this.phoneBook.filter((phone) => phone.id !== selectedPhone)
   }
 
-  editTel(selectedPhone: string){
-     this.phoneBook = this.phoneItem.name
-  }
+//  editTel(selectedPhone: string){
+//     this.phoneBook = this.phoneItem.name
+//  }
 }
