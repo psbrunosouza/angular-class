@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {PhoneBookModel} from "../phone-book.model";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {PhoneBookModel} from "../../@core/data/phone-book.model";
 
 @Component({
   selector: 'app-phone-item',
@@ -9,7 +9,10 @@ import {PhoneBookModel} from "../phone-book.model";
 export class PhoneItemComponent implements OnInit {
 
   @Input() phoneItem: PhoneBookModel;
+
   @Input() phoneBook: PhoneBookModel[] = [];
+
+  @Output() selectPhone$: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() { }
 
@@ -17,7 +20,7 @@ export class PhoneItemComponent implements OnInit {
   }
 
   deleteTel(selectedPhone: number): void{
-    this.phoneBook = this.phoneBook.filter((phone) => phone.id !== selectedPhone)
+    this.selectPhone$.emit(selectedPhone);
   }
 
 //  editTel(selectedPhone: string){
