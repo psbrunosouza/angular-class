@@ -8,18 +8,7 @@ import {PhoneBookModel} from "./phone-book.model";
 })
 export class PhoneBookComponent implements OnInit {
 
-  phoneBook: PhoneBookModel[] = [
-    {
-      name: "José",
-      phone: "19 99999-9999",
-      status: "disponível"
-    },
-    {
-      name: "João",
-      phone: "11 98999-9999",
-      status: "bloqueado"
-    }
-  ]
+  phoneBook: PhoneBookModel[] = []
 
   constructor() { }
 
