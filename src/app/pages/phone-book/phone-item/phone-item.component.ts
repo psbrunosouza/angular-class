@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {PhoneBookModel} from "../phone-book.model";
+import {PhoneBookModel} from "../../../@core/model/phone-book.model";
 
 @Component({
   selector: 'app-phone-item',
@@ -15,4 +15,7 @@ export class PhoneItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  act(): void {
+    console.log("teste")
+  }
 }

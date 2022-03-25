@@ -1,18 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import {PhoneBookModel} from "./phone-book.model";
+import {PhoneBookModel} from "../../@core/model/phone-book.model";
+import {PhoneBookService} from "../../@core/api/phone-book.service";
 
 @Component({
   selector: 'app-phone-book',
   templateUrl: './phone-book.component.html',
-  styleUrls: ['./phone-book.component.scss']
+  styleUrls: ['./phone-book.component.scss'],
+  providers: [PhoneBookService]
 })
 export class PhoneBookComponent implements OnInit {
+  phoneBook: PhoneBookModel[] = [];
 
-  phoneBook: PhoneBookModel[] = []
-
-  constructor() { }
+  constructor(private phoneBookService: PhoneBookService) { }
 
   ngOnInit(): void {
+    this.loadPhoneBook();
   }
 
+  loadPhoneBook(): void {
+    this.phoneBookService.listPhonebook().subscribe((res) => {
+      this.phoneBook = res;
+    })
+  }
 }
