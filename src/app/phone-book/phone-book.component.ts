@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PhoneBookModel} from "./phone-book.model";
+import {PhoneBookModel} from "../@core/data/phone-book.model";
 
 @Component({
   selector: 'app-phone-book',
@@ -57,6 +57,9 @@ export class PhoneBookComponent implements OnInit {
 
   }
 
+  getPhoneNumberId(id: number): void {
+    this.phoneBook = this.phoneBook.filter((phone) => phone.id !== id)
+  }
 }
   /*
   deleteTel(selectedPhone: number): void{
