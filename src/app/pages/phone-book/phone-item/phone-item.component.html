@@ -14,9 +14,10 @@
     <br><br>
 
     <div class="botoes">
-      <button (click)="deleteTel(phoneItem.id)"  class="butExcluir"> <!--(click)="phoneBook.deleteTel(phoneItem.id)"-->Excluir</button>
+      <button (click)="delete(phoneItem.id)"  class="butExcluir"> <!--(click)="phoneBook.deleteTel(phoneItem.id)"-->Excluir</button>
       <button  class="butEditar"> <!--(click)="phoneBook.editTel()"-->Editar</button>
     </div>
   </div>
 </div>
 <br>
+<button (click)="create(phoneItem)">Adiciona</button>
