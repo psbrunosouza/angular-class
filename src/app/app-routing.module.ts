@@ -15,12 +15,10 @@ const routes: Routes = [
   {
     path: 'phonebook',
     component: PhoneBookComponent,
-    children: [
-      {
-        path: 'CreatePhoneItem',
-        component: CreatePhoneItemComponent,
-      }
-    ]
+  },
+  {
+    path: 'CreatePhoneItem',
+    component: CreatePhoneItemComponent,
   }
 ];
 

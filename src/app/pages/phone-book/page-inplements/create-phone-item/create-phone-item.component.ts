@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-create-phone-item',
@@ -8,6 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class CreatePhoneItemComponent implements OnInit {
 
   constructor() { }
+
+  name = new FormControl('');
+  phone = new FormControl('');
+  status = new FormControl('');
+  cpf = new FormControl('');
+  isInternational = new FormControl(false);
+  idade = new FormControl();
+  auxiliarPhones = new FormControl('');
 
   ngOnInit(): void {
   }

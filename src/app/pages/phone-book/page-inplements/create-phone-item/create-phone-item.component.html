@@ -1,1 +1,46 @@
-<p>Hello word!</p>
+<div>
+  <label for="name" class="form-check-label">Name:</label>
+  <input class="form-control" id="name" type="text" [formControl]="name" >
+</div>
+<br>
+<div>
+  <label for="phone" class="form-check-label">Phone:</label>
+  <input class="form-control" id="phone" type="text" [formControl]="phone">
+</div>
+<br>
+<div>
+  <label for="status" class="form-check-label">Status:</label>
+  <input class="form-control" id="status" type="text" [formControl]="status">
+</div>
+<br>
+<div>
+  <label for="cpf" class="form-check-label">CPF:</label>
+  <input class="form-control" id="cpf" type="number" mask="<here goes your mask>" placeholder="000.000.000-00" mask="000.000.000-00" [formControl]="cpf">
+</div>
+<br>
+<div>
+  <label for="isInternational" class="form-check-label">Seu número é internacional?:</label>
+  <br>
+  <input id="isInternationalTrue" type="radio" name="isInternational" [formControl]="isInternational">
+  <label>Sim</label>
+  <br>
+  <input id="isInternational" type="radio" name="isInternational" [formControl]="isInternational">
+  <label>Não</label>
+  <p>{{isInternational}}</p>
+</div>
+<br>
+<div>
+  <label for="idade" class="form-check-label">Idade:</label>
+  <input class="form-control" id="idade" type="number" [formControl]="idade">
+</div>
+<br>
+<div>
+  <label for="auxiliarPhones" class="form-check-label">Telefones auxiliares:</label>
+  <input class="form-control" id="auxiliarPhones" type="text" [formControl]="auxiliarPhones">
+</div>
+
+<p>value: {{name.value}}</p>
+
+<button type="submit" class="btn btn-primary">Enviar</button>
+<br>
+<a href="http://localhost:4200/phonebook">Voltar ao home</a>
