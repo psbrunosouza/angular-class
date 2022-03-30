@@ -7,6 +7,7 @@ import {PhoneBookModule} from "./pages/phone-book/phone-book.module";
 import {HttpClientModule} from "@angular/common/http";
 import { CreatePhoneItemComponent } from './pages/phone-book/page-inplements/create-phone-item/create-phone-item.component';
 import { EditPhoneItemComponent } from './pages/phone-book/page-inplements/edit-phone-item/edit-phone-item.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditPhoneItemComponent } from './pages/phone-book/page-inplements/edit-
     BrowserModule,
     FormsModule,
     PhoneBookModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
