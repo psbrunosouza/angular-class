@@ -1,5 +1,15 @@
 {
-  "phoneBook": [
+  "phoneBook" : [
+    {
+      "id": 1,
+      "name": "José",
+      "phone": "21 99999-9999",
+      "status": "disponível",
+      "cpf": "550.415.008-60",
+      "isInternational": true,
+      "idade": 18,
+      "auxiliarPhones": ["(19)996064757", "(19)996064757"]
+    },
     {
       "id": 2,
       "name": "Lucas",
@@ -8,10 +18,7 @@
       "cpf": "550.415.008-60",
       "isInternational": true,
       "idade": 18,
-      "auxiliarPhones": [
-        "(19)996064757",
-        "(19)996064757"
-      ]
+      "auxiliarPhones":["(19)996064757", "(19)996064757"]
     },
     {
       "id": 3,
@@ -21,10 +28,7 @@
       "cpf": "550.415.008-60",
       "isInternational": false,
       "idade": 18,
-      "auxiliarPhones": [
-        "(19)996064757",
-        "(19)996064757"
-      ]
+      "auxiliarPhones":["(19)996064757", "(19)996064757"]
     },
     {
       "id": 4,
@@ -34,10 +38,7 @@
       "cpf": "550.415.008-60",
       "isInternational": false,
       "idade": 18,
-      "auxiliarPhones": [
-        "(19)996064757",
-        "(19)996064757"
-      ]
+      "auxiliarPhones":["(19)996064757", "(19)996064757"]
     }
   ]
-  }
+}

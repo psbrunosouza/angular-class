@@ -8,7 +8,7 @@ import { PhoneItemComponent } from './phone-item/phone-item.component';
 @NgModule({
   declarations: [
     PhoneBookComponent,
-    PhoneItemComponent
+    PhoneItemComponent,
   ],
   exports: [
     PhoneBookComponent

@@ -1,11 +1,13 @@
 .phone-item{
-  display: flex;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
   text-align: center;
-  background-color: #b69bff;
+  background-image: linear-gradient(to right, rgb(153, 186, 255), rgb(182, 155, 255));
   margin-top: 0.5%;
   padding: 0.5%;
   border-radius: 5%;
-  margin-right: 80%;
+  width: 20%;
+  box-shadow: 1px 1px 18px 2px silver;
 }
 .dados{
   margin-left: 5%;
