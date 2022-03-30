@@ -5,10 +5,14 @@ import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import {PhoneBookModule} from "./pages/phone-book/phone-book.module";
 import {HttpClientModule} from "@angular/common/http";
+import { CreatePhoneItemComponent } from './pages/phone-book/page-inplements/create-phone-item/create-phone-item.component';
+import { EditPhoneItemComponent } from './pages/phone-book/page-inplements/edit-phone-item/edit-phone-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CreatePhoneItemComponent,
+    EditPhoneItemComponent,
   ],
   imports: [
     BrowserModule,
