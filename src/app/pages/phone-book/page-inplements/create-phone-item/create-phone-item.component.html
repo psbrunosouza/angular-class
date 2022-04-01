@@ -5,12 +5,18 @@
 <br>
 <div>
   <label for="phone" class="form-check-label">Phone:</label>
-  <input class="form-control" id="phone" type="text" [formControl]="phone">
+  <input class="form-control" id="phone" type="text" placeholder="(00)00000-0000" mask="(00)00000-0000" [formControl]="phone">
 </div>
 <br>
 <div>
-  <label for="status" class="form-check-label">Status:</label>
-  <input class="form-control" id="status" type="text" [formControl]="status">
+  <label for="isInternational" class="form-check-label">Seu número é internacional?:</label>
+  <br>
+  <input id="isDisponivel" type="radio" name="isDisponivel" [formControl]="isInternational">
+  <label>Sim</label>
+  <br>
+  <input id="isBloqueado" type="radio" name="isBloqueado" [formControl]="isInternational">
+  <label>Não</label>
+  <p>{{isInternational}}</p>
 </div>
 <br>
 <div>

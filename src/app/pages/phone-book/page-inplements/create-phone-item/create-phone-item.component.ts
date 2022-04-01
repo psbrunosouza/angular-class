@@ -17,7 +17,6 @@ export class CreatePhoneItemComponent implements OnInit {
   isInternational = new FormControl(false);
   idade = new FormControl();
   auxiliarPhones = new FormControl('');
-
   ngOnInit(): void {
   }
 
