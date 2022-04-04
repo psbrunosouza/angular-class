@@ -12,7 +12,6 @@ const routes: Routes = [
     redirectTo: 'phonebook',
     pathMatch: 'full'
   },
-
   {
     path: 'phonebook',
     component: PhoneBookComponent,
@@ -22,7 +21,7 @@ const routes: Routes = [
     component: CreatePhoneItemComponent,
   },
   {
-    path: 'EditPhoneItem://id',
+    path: 'EditPhoneItem/id',
     component: EditPhoneItemComponent
   }
 ];
