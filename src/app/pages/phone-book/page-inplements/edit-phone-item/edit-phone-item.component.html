@@ -1,1 +1,42 @@
-<p>edit-phone-item works!</p>
+<div>
+  <label for="name" class="form-check-label">Name:</label>
+  <input class="form-control" id="name" type="text" [formControl]="name" >
+</div>
+<div>
+  <label for="name" class="form-check-label">Id:</label>
+  <input class="form-control" id="id" type="number" [formControl]="id" >
+</div>
+<br>
+<div>
+  <label for="phone" class="form-check-label">Phone:</label>
+  <input class="form-control" id="phone" type="text" placeholder="(00)00000-0000" mask="(00)00000-0000" [formControl]="phone">
+</div>
+<br>
+<div>
+  <label for="cpf" class="form-check-label">CPF:</label>
+  <input class="form-control" id="cpf" type="text" placeholder="000.000.000-00" mask="000.000.000-00" [formControl]="cpf">
+</div>
+<br>
+<div>
+  <label for="isInternational" class="form-check-label">Seu número é internacional?:</label>
+  <br>
+  <input id="isInternationalTrue" type="radio" name="isInternational" [formControl]="isInternational">
+  <label>Sim</label>
+  <br>
+  <input id="isInternational" type="radio" name="isInternational" [formControl]="isInternational">
+  <label>Não</label>
+</div>
+<br>
+<div>
+  <label for="idade" class="form-check-label">Idade:</label>
+  <input class="form-control" id="idade" type="number" [formControl]="idade">
+</div>
+<br>
+<div>
+  <label for="auxiliarPhones" class="form-check-label">Telefones auxiliares:</label>
+  <input class="form-control" id="auxiliarPhones" type="text" [formControl]="auxiliarPhones">
+</div>
+<br>
+<button type="submit" class="btn btn-primary">Confirmar</button>
+<br>
+<a href="http://localhost:4200/phonebook">Voltar ao home</a>

@@ -2,21 +2,14 @@
   <label for="name" class="form-check-label">Name:</label>
   <input class="form-control" id="name" type="text" [formControl]="name" >
 </div>
+<div>
+  <label for="name" class="form-check-label">Id:</label>
+  <input class="form-control" id="id" type="number" [formControl]="id" >
+</div>
 <br>
 <div>
   <label for="phone" class="form-check-label">Phone:</label>
   <input class="form-control" id="phone" type="text" placeholder="(00)00000-0000" mask="(00)00000-0000" [formControl]="phone">
-</div>
-<br>
-<div>
-  <label for="isInternational" class="form-check-label">Seu número é internacional?:</label>
-  <br>
-  <input id="isDisponivel" type="radio" name="isDisponivel" [formControl]="isInternational">
-  <label>Sim</label>
-  <br>
-  <input id="isBloqueado" type="radio" name="isBloqueado" [formControl]="isInternational">
-  <label>Não</label>
-  <p>{{isInternational}}</p>
 </div>
 <br>
 <div>
@@ -32,7 +25,6 @@
   <br>
   <input id="isInternational" type="radio" name="isInternational" [formControl]="isInternational">
   <label>Não</label>
-  <p>{{isInternational}}</p>
 </div>
 <br>
 <div>
@@ -44,9 +36,7 @@
   <label for="auxiliarPhones" class="form-check-label">Telefones auxiliares:</label>
   <input class="form-control" id="auxiliarPhones" type="text" [formControl]="auxiliarPhones">
 </div>
-
-<p>value: {{name.value}}</p>
-
-<button type="submit" class="btn btn-primary">Enviar</button>
+<br>
+<button type="submit" class="btn btn-primary" (click)="create=()">Enviar</button>
 <br>
 <a href="http://localhost:4200/phonebook">Voltar ao home</a>
