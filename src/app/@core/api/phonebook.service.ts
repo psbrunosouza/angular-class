@@ -20,7 +20,10 @@ export class PhoneBookService {
     return this.http.get<PhoneBookModel[]>(`${this.baseUrl}/phonebook`);
   }
 
-  //Atualiza os dados com valores pré definidos
+  //Atualiza os dados
+  editPhone(selectedPhone: number): Observable<PhoneBookModel>{
+    return this.http.put<PhoneBookModel>(`${this.baseUrl}/phonebook/${selectedPhone}`);
+  }
 
 
   //Deleta o card de numero por meio do selectedPhone --> que é obtido pelo parametro do button no click

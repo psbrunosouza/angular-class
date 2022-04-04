@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PhoneBookComponent } from './phone-book.component';
 import { PhoneItemComponent } from './phone-item/phone-item.component';
+import {RouterModule} from "@angular/router";
 
 
 
@@ -13,8 +14,9 @@ import { PhoneItemComponent } from './phone-item/phone-item.component';
   exports: [
     PhoneBookComponent
   ],
-  imports: [
-    CommonModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule
+    ]
 })
 export class PhoneBookModule { }

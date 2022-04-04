@@ -4,6 +4,7 @@ import {PhoneBookComponent} from "./pages/phone-book/phone-book.component";
 import {
   CreatePhoneItemComponent
 } from "./pages/phone-book/page-inplements/create-phone-item/create-phone-item.component";
+import {EditPhoneItemComponent} from "./pages/phone-book/page-inplements/edit-phone-item/edit-phone-item.component";
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'CreatePhoneItem',
     component: CreatePhoneItemComponent,
+  },
+  {
+    path: 'EditPhoneItem://id',
+    component: EditPhoneItemComponent
   }
 ];
 

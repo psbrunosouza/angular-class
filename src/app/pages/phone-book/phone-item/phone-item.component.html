@@ -14,10 +14,9 @@
     <br><br>
 
     <div class="botoes">
-      <button (click)="delete(phoneItem.id)"  class="butExcluir"> <!--(click)="phoneBook.deleteTel(phoneItem.id)"-->Excluir</button>
-      <button  class="butEditar"> <!--(click)="phoneBook.editTel()"-->Editar</button>
+      <button (click)="delete(phoneItem.id)"  class="butExcluir">Excluir</button>
+      <button [routerLink]="['/phonebook/EditPhoneItem', phoneItem]" class="butEditar"> <!--(click)="phoneBook.editTel()"-->Editar</button>
     </div>
   </div>
 </div>
 <br>
-<!--<button (click)="create({id: 5, name:"igor", phone: "1999", status: "disponivel", cpf: "550", isInternational: False, idade: 18, auxiliarPhones: ["000"]})">Adiciona</button>-->

@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PhoneBookModel} from "../../../@core/model/phone-book.model";
 import {PhoneBookService} from "../../../@core/api/phonebook.service";
 
+
 @Component({
   selector: 'app-phone-item',
   templateUrl: './phone-item.component.html',
@@ -26,16 +27,8 @@ export class PhoneItemComponent implements OnInit {
     console.log("teste")
   }
 
-  create(phoneBook: PhoneBookModel){
-    this.phoneBookService.addPhone(phoneBook).subscribe(phoneBook => console.log(phoneBook))
-  }
-
   delete(id: number){
     this.phoneBookService.deleteTel(id).subscribe((phone) => {console.log(phone)})
   }
 
-
-//  editTel(selectedPhone: string){
-//     this.phoneBook = this.phoneItem.name
-//  }
 }
