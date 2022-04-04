@@ -18,14 +18,14 @@ export class EditPhoneItemComponent implements OnInit {
 
   constructor(private phoneBookService: PhoneBookService) {
   }
-  id = new FormControl();
-  name = new FormControl('');
-  phone = new FormControl('');
-  status = new FormControl('');
-  cpf = new FormControl('');
-  isInternational = new FormControl(false);
-  idade = new FormControl();
-  auxiliarPhones = new FormControl('');
+  id = new FormControl(PhoneBookModel);
+  name = new FormControl(PhoneBookModel.name);
+  phone = new FormControl(PhoneBookModel);
+  status = new FormControl(PhoneBookModel);
+  cpf = new FormControl(PhoneBookModel);
+  isInternational = new FormControl(PhoneBookModel);
+  idade = new FormControl(PhoneBookModel);
+  auxiliarPhones = new FormControl(PhoneBookModel);
 
   ngOnInit(): void {
   }
@@ -33,9 +33,8 @@ export class EditPhoneItemComponent implements OnInit {
 //  editTel(selectedPhone: id){
 //    this.phoneBook = this.phoneItem.name
 //  }
-
-  delete(id: number){
-    this.phoneBookService.deleteTel(id).subscribe((phone) => {console.log(phone)})
+  edit(id: number){
+    this.phoneBookService.editPhone(this.phoneItem).subscribe((phone) => {console.log(phone)})
   }
 
 }

@@ -27,11 +27,12 @@ export class CreatePhoneItemComponent implements OnInit {
   isInternational = new FormControl(false);
   idade = new FormControl();
   auxiliarPhones = new FormControl('');
+
   ngOnInit(): void {
   }
 
-  create(){
-    this.phoneBookService.addPhone().subscribe(phoneBook => console.log())
+  create(Phone: PhoneBookModel){
+    this.phoneBookService.addPhone(this.phoneItem).subscribe(phoneBook => console.log(this.phone))
   }
 
 }

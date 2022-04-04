@@ -30,5 +30,4 @@ export class PhoneItemComponent implements OnInit {
   delete(id: number){
     this.phoneBookService.deleteTel(id).subscribe((phone) => {console.log(phone)})
   }
-
 }
