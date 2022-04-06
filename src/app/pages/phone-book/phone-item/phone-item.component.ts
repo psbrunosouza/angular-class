@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PhoneBookModel} from "../../../@core/model/phone-book.model";
 import {PhoneBookService} from "../../../@core/api/phonebook.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -17,7 +18,7 @@ export class PhoneItemComponent implements OnInit {
 
   @Output() selectPhone$: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor(private phoneBookService: PhoneBookService) {
+  constructor(private phoneBookService: PhoneBookService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -28,6 +29,8 @@ export class PhoneItemComponent implements OnInit {
   }
 
   delete(id: number){
-    this.phoneBookService.deleteTel(id).subscribe((phone) => {console.log(phone)})
+    this.phoneBookService.deleteTel(id).subscribe(() => {
+
+    })
   }
 }

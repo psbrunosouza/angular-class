@@ -7,5 +7,4 @@ export class PhoneBookModel {
   cpf: string;
   isInternational: boolean;
   idade: number;
-  auxiliarPhones: String[];
 }
