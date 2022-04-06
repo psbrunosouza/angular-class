@@ -17,7 +17,7 @@ const routes: Routes = [
     component: PhoneBookComponent,
   },
   {
-    path: 'CreatePhoneItem',
+    path: 'createPhoneItem',
     component: CreatePhoneItemComponent,
   },
   {
