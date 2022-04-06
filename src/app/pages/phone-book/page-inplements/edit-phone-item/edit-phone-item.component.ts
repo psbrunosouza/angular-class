@@ -18,14 +18,6 @@ export class EditPhoneItemComponent implements OnInit {
 
   constructor(private phoneBookService: PhoneBookService) {
   }
-  id = new FormControl(PhoneBookModel);
-  name = new FormControl(PhoneBookModel.name);
-  phone = new FormControl(PhoneBookModel);
-  status = new FormControl(PhoneBookModel);
-  cpf = new FormControl(PhoneBookModel);
-  isInternational = new FormControl(PhoneBookModel);
-  idade = new FormControl(PhoneBookModel);
-  auxiliarPhones = new FormControl(PhoneBookModel);
 
   ngOnInit(): void {
   }

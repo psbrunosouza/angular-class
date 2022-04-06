@@ -1,5 +1,5 @@
 <!--Testa se o status do phoneItem é disponivel então adiciona a class phone-item-->
-<div *ngIf="phoneItem.status === 'disponível'" class="phone-item">
+<div *ngIf="phoneItem.status === 'disponivel'" class="phone-item">
   <div class="dados">
     <!--Interpola o dado com o atributo para atualizar o p-->
     <p>Name: {{phoneItem.name}}</p>
@@ -9,13 +9,12 @@
     <p *ngIf="phoneItem.isInternational === true">Usuário Internacional</p>
     <p>Telefones auxiliares:</p>
     <!--Lista de telefones auxiliares-->
-    <small>{{phoneItem.auxiliarPhones}}</small>
 
     <br><br>
 
     <div class="botoes">
       <button (click)="delete(phoneItem.id)"  class="butExcluir">Excluir</button>
-      <button href="phonebook/EditPhoneItem/id" class="butEditar">Editar</button>
+      <button [routerLink]="['/EditPhoneItem/']" class="butEditar">Editar</button>
     </div>
   </div>
 </div>
