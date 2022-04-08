@@ -1,0 +1,13 @@
+.contacts {
+  background-color: #d2d2d2;
+  padding: 8px;
+  border-radius: 4px;
+
+  .contacts-add {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 6px;
+  }
+}

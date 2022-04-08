@@ -1,14 +1,10 @@
 {
   "phonebook": [
     {
-      "name": "José",
-      "phone": "19 99999-9999",
-      "status": "disponível"
-    },
-    {
-      "name": "João",
-      "phone": "11 98999-9999",
-      "status": "bloqueado"
+      "name": "Marios",
+      "phone": "99 999999999",
+      "status": "ativo",
+      "id": "22acfd52-5bc3-47cb-a1de-7c0df51eca59"
     }
   ]
 }
