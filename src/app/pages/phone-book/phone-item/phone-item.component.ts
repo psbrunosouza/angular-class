@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PhoneBookModel} from "../../../@core/model/phone-book.model";
 import {PhoneBookService} from "../../../@core/api/phonebook.service";
-import {Router} from "@angular/router";
 
 
 @Component({
@@ -14,23 +13,19 @@ export class PhoneItemComponent implements OnInit {
 
   @Input() phoneItem: PhoneBookModel;
 
-  @Input() phoneBook: PhoneBookModel[] = [];
-
   @Output() selectPhone$: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor(private phoneBookService: PhoneBookService, private router: Router) {
+  @Output() contactsEvent = new EventEmitter();
+
+  constructor(private phoneBookService: PhoneBookService) {
   }
 
   ngOnInit(): void {
   }
 
-  act(): void {
-    console.log("teste")
-  }
-
-  delete(id: number){
-    this.phoneBookService.deleteTel(id).subscribe(() => {
-
+  delete(id: string): void{
+    this.phoneBookService.deletePhone(id).subscribe(() => {
+      this.contactsEvent.emit(null);
     })
   }
 }

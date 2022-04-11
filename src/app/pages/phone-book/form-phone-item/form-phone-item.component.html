@@ -1,10 +1,5 @@
 <form>
   <div>
-    <label for="id" class="form-check-label">Id:</label>
-    <input name="id" class="form-control" id="id" type="number" [(ngModel)]="phoneItem.id" >
-  </div>
-  <br>
-  <div>
     <label for="name" class="form-check-label">Name:</label>
     <input name="name" class="form-control" id="name" type="text" [(ngModel)]="phoneItem.name" >
   </div>
@@ -22,11 +17,8 @@
   <div>
     <label for="isInternational" class="form-check-label">Seu número é internacional?:</label>
     <br>
-    <input id="isInternationalTrue" type="radio" name="isInternational" [(ngModel)]="phoneItem.isInternational">
+    <input id="isInternational" type="radio" name="isInternationalTrue" [(ngModel)]="phoneItem.isInternational">
     <label>Sim</label>
-    <br>
-    <input id="isInternational" type="radio" name="isInternational" [(ngModel)]="phoneItem.isInternational">
-    <label>Não</label>
   </div>
   <br>
   <div>
@@ -39,6 +31,8 @@
     <input name="idade" class="form-control" id="idade" type="number" [(ngModel)]="phoneItem.idade">
   </div>
   <br>
+  <button type="submit" class="btn btn-primary" (click)="onSubmit()">Enviar</button>
   <br>
-  <a href="http://localhost:4200/phonebook">Voltar ao home</a>
+  <a [routerLink]="['/phonebook']">Voltar ao home</a>
 </form>
+

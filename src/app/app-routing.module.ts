@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {PhoneBookComponent} from "./pages/phone-book/phone-book.component";
-import {CreatePhoneItemComponent} from "./pages/phone-book/page-inplements/create-phone-item/create-phone-item.component";
-import {EditPhoneItemComponent} from "./pages/phone-book/page-inplements/edit-phone-item/edit-phone-item.component";
+import {FormPhoneItemComponent} from "./pages/phone-book/form-phone-item/form-phone-item.component";
 
 const routes: Routes = [
   {
@@ -16,11 +15,11 @@ const routes: Routes = [
   },
   {
     path: 'CreatePhoneItem',
-    component: CreatePhoneItemComponent,
+    component: FormPhoneItemComponent,
   },
   {
-    path: 'EditPhoneItem',
-    component: EditPhoneItemComponent
+    path: 'CreatePhoneItem/:id',
+    component: FormPhoneItemComponent
   }
 ];
 
