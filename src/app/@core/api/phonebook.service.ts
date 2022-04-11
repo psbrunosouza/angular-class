@@ -10,7 +10,7 @@ export class PhoneBookService {
 
   constructor(private http: HttpClient) {}
 
-  //Busca um card
+  //Busca um card por seu id
   findPhoneItem(id: string): Observable<PhoneBookModel> {
     return this.http.get<PhoneBookModel>(`${this.baseUrl}/phonebook/${id}`);
   }

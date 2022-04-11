@@ -5,16 +5,10 @@
     <p>Name: {{phoneItem.name}}</p>
     <p>Status: {{phoneItem.status}}</p>
     <p>CPF: {{phoneItem.cpf}}</p>
-    <!--Testa se o telefone é internacional-->
-    <p *ngIf="phoneItem.isInternational === true">Usuário Internacional</p>
-    <p>Telefones auxiliares:</p>
-    <!--Lista de telefones auxiliares-->
-
     <br><br>
-
     <div class="botoes">
       <button (click)="delete(phoneItem.id)"  class="butExcluir">Excluir</button>
-      <button [routerLink]="['/EditPhoneItem/']" class="butEditar">Editar</button>
+      <button [routerLink]="['./EditPhoneItem/', phoneItem.id]" class="butEditar">Editar</button>
     </div>
   </div>
 </div>

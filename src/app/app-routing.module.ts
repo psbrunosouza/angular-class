@@ -18,7 +18,7 @@ const routes: Routes = [
     component: FormPhoneItemComponent,
   },
   {
-    path: 'CreatePhoneItem/:id',
+    path: 'EditPhoneItem/:id',
     component: FormPhoneItemComponent
   }
 ];

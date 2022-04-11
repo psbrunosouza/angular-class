@@ -13,9 +13,7 @@ export class PhoneItemComponent implements OnInit {
 
   @Input() phoneItem: PhoneBookModel;
 
-  @Output() selectPhone$: EventEmitter<number> = new EventEmitter<number>();
-
-  @Output() contactsEvent = new EventEmitter();
+  @Output() phoneItenEvent = new EventEmitter();
 
   constructor(private phoneBookService: PhoneBookService) {
   }
@@ -23,9 +21,10 @@ export class PhoneItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //deleta por a funçao do service e emite um evento para o PhoneBook
   delete(id: string): void{
     this.phoneBookService.deletePhone(id).subscribe(() => {
-      this.contactsEvent.emit(null);
+      this.phoneItenEvent.emit(null);
     })
   }
 }

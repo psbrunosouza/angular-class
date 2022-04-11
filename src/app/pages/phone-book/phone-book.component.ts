@@ -9,14 +9,18 @@ import {PhoneBookService} from "../../@core/api/phonebook.service";
   providers: [PhoneBookService]
 })
 export class PhoneBookComponent implements OnInit {
+  //declaração do phoneBook
   phoneBook: PhoneBookModel[] = [];
 
+  //"injeção" do phoneBookService
   constructor(private phoneBookService: PhoneBookService) { }
 
+  //faz com que logo no início da página ele carregue a punça~p
   ngOnInit(): void {
     this.loadPhoneBook();
   }
 
+  //carreaga os cards
   loadPhoneBook(): void {
     this.phoneBookService.listPhonebook().subscribe((res) => {
       this.phoneBook = res;

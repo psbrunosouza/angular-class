@@ -10,6 +10,7 @@ import {v4 as uuidv4} from 'uuid';
   styleUrls: ['./form-phone-item.component.scss'],
   providers:[PhoneBookService]
 })
+
 export class FormPhoneItemComponent implements OnInit {
 
   phoneItem: PhoneBookModel;
@@ -21,30 +22,36 @@ export class FormPhoneItemComponent implements OnInit {
 ) { }
 
   ngOnInit(): void {
+    //instancia o phoneItem
     this.phoneItem = new PhoneBookModel();
 
+  //testa se a rota tem id ou não para separar o create de edit
   this.activatedRoute.params.subscribe((param) => {
     if(!param.id){
-  return;
+      return;
   }
 
+  //carrega a função loadPhoneById
   this.loadPhoneById(param.id);
   })
 }
 
+  //carrega os atributos do phoneItem do id selecionado
   loadPhoneById(id: string): void {
     this.phoneBookService.findPhoneItem(id).subscribe((PhoneItem) => {
       this.phoneItem = PhoneItem;
     })
   }
 
+  //salva os atributos dos inputs para a criação por meio do service
   createPhone(): void {
-    this.phoneBookService.createPhone({...this.phoneItem, id: uuidv4()})
+    this.phoneBookService.createPhone({...this.phoneItem, id: uuidv4()})//adiciona um UUID automático
       .subscribe(() => {
         this.router.navigate(['../'])
       })
   }
 
+  //salva os atributos dos inputs para sobreescrever os dados salvo por meio do service
   updatePhone(): void {
     this.phoneBookService.editPhone(this.phoneItem)
       .subscribe(() => {
@@ -52,9 +59,10 @@ export class FormPhoneItemComponent implements OnInit {
       })
   }
 
+  //testa se a rota possui ID ou não, se possuir confirma a edição se nao confirma a criação
   onSubmit(): void {
     if(this.phoneItem.id){
-    this.updatePhone();
+      this.updatePhone();
   }else {
     this.createPhone();
   }
