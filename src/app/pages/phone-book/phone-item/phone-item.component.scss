@@ -1,16 +1,9 @@
 .phone-item{
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
   text-align: center;
   background-image: linear-gradient(to right, rgb(153, 186, 255), rgb(182, 155, 255));
-  margin-top: 0.5%;
-  padding: 0.5%;
   border-radius: 5%;
-  width: 20%;
   box-shadow: 1px 1px 18px 2px silver;
-}
-.dados{
-  margin-left: 18%;
+  padding: 5%;
 }
 .botoes{
   justify-content: center;

@@ -1,6 +1,6 @@
 //Declara os atributos de PhoneBook
 export class PhoneBookModel {
-  id: number;
+  id: string;
   name: string;
   phone: string;
   status: string;

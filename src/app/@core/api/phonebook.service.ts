@@ -10,8 +10,13 @@ export class PhoneBookService {
 
   constructor(private http: HttpClient) {}
 
+  //Busca um card
+  findPhoneItem(id: string): Observable<PhoneBookModel> {
+    return this.http.get<PhoneBookModel>(`${this.baseUrl}/phonebook/${id}`);
+  }
+
   //Cria um card de numero de telefone no bookFone
-  addPhone(phone: PhoneBookModel): Observable<PhoneBookModel>{
+  createPhone(phone: PhoneBookModel): Observable<PhoneBookModel>{
     return this.http.post<PhoneBookModel>(`${this.baseUrl}/phonebook`, phone)
   }
 
@@ -26,7 +31,7 @@ export class PhoneBookService {
   }
 
   //Deleta o card de numero por meio do selectedPhone --> que é obtido pelo parametro do button no click
-  deleteTel(selectedPhone: number): Observable<PhoneBookModel>{
+  deletePhone(selectedPhone: string): Observable<PhoneBookModel>{
     return this.http.delete<PhoneBookModel>(`${this.baseUrl}/phonebook/${selectedPhone}`);
   }
 

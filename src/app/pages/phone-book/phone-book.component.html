@@ -1,4 +1,8 @@
-<a [routerLink]="['/CreatePhoneItem']">Crie um registro</a>
-<div *ngFor="let item of phoneBook">
-  <app-phone-item [phoneItem]="item"></app-phone-item>
+<div class="book-container">
+  <button [routerLink]="['/CreatePhoneItem']" class="phone-book-button">Crie um registro</button>
+  <div class="phone-book-container">
+    <div *ngFor="let item of phoneBook;">
+    <app-phone-item [phoneItem]="item"></app-phone-item>
+  </div>
+</div>
 </div>
