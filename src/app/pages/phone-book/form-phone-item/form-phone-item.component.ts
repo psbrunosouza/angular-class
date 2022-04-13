@@ -56,6 +56,7 @@ export class FormPhoneItemComponent implements OnInit {
     this.phoneBookService.editPhone(this.phoneItem)
       .subscribe(() => {
         this.router.navigate(['../'])
+        //muda a rota para a rota pai
       })
   }
 

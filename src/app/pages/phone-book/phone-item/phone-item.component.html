@@ -5,11 +5,9 @@
     <p>Name: {{phoneItem.name}}</p>
     <p>Status: {{phoneItem.status}}</p>
     <p>CPF: {{phoneItem.cpf}}</p>
-    <br><br>
     <div class="botoes">
       <button (click)="delete(phoneItem.id)"  class="butExcluir">Excluir</button>
-      <button [routerLink]="['./EditPhoneItem/', phoneItem.id]" class="butEditar">Editar</button>
+      <button [routerLink]="['EditPhoneItem', phoneItem.id]" class="butEditar">Editar</button>
     </div>
   </div>
 </div>
-<br>

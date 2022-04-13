@@ -2,7 +2,7 @@
   <button [routerLink]="['/CreatePhoneItem']" class="phone-book-button">Crie um registro</button>
   <div class="phone-book-container">
     <div *ngFor="let item of phoneBook;">
-    <app-phone-item [phoneItem]="item"></app-phone-item>
+    <app-phone-item (phoneItenEvent)="loadPhoneBook()" [phoneItem]="item"></app-phone-item>
   </div>
 </div>
 </div>

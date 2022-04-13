@@ -11,12 +11,11 @@ import {PhoneBookService} from "../../../@core/api/phonebook.service";
 })
 export class PhoneItemComponent implements OnInit {
 
-  @Input() phoneItem: PhoneBookModel;
-
   @Output() phoneItenEvent = new EventEmitter();
 
-  constructor(private phoneBookService: PhoneBookService) {
-  }
+  @Input() phoneItem: PhoneBookModel;
+
+  constructor(private phoneBookService: PhoneBookService) { }
 
   ngOnInit(): void {
   }
